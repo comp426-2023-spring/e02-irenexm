@@ -1,12 +1,63 @@
 <html>
-    <head>
-        <title>Rock</title>
-        <!-- Link to your script file(s) and CSS in here somewhere -->
-    </head>
-    <body>
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <title>RPSLS</title>
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <header class="gameHeader">
+      <h1>Play RPS or RPSLS!</h1>
+      <div class="rules">click for rules</div>
+    </header>
 
-    <!-- Your interface markup goes here -->
-    <!-- For interface examples, look in the `/examples/` directory in the root of your starter code repo. -->
+    <main>
 
-    </body>
+      <input type="radio" name="mode" id="rps" class="mode-option" checked>
+      <label id="play-rps">Play Rock, Paper, Scissors</label>
+      <br>
+      <input type="radio" name="mode" id="rpsls" class="mode-option">
+      <label id="play-rpsls">Play Rock, Paper, Scissors, Lizard, Spock</label>
+      <br>
+      <input type="checkbox" id="opponent" class="mode-option">
+      <label id="play-opponent" >Play against an opponent?</label>
+
+      <form action="/action_page.php">
+        <label for="shot">choose a weapon</label>
+        <select name="shot" id="shot">
+          <option value="rock">rock</option>
+        </select>
+      </form>
+
+      <div class="rps-buttons">
+        <button id="rps">RPS</button>
+        <button id="rpsls">RPSLS</button>
+      </div>
+
+      <div class="mode-buttons">
+        <button id="player">Play vs Opponent</button>
+        <button id="random-choice">Random Choice</button>
+      </div>
+
+      <div class="game-buttons">
+        <button id="rock">Rock</button>
+        <button id="paper">Paper</button>
+        <button id="scissors">Scissors</button>
+        <button id="lizard">Lizard</button>
+        <button id="spock">Spock</button>
+      </div>
+      
+      <div class="game-output">
+
+      </div>
+
+      <div class="scoreboard">
+
+      </div>
+
+      <div class="end-message">
+        
+      </div>
+
+    </main>
+  </body>
 </html>
