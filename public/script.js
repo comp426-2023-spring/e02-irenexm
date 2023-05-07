@@ -6,5 +6,18 @@ const rock = document.querySelector('#rock');
 const paper = document.querySelector('#paper');
 const scissors = document.querySelector('#scissors');
 
+const resultText = document.querySelector('.result-text')
+    
+function playGame() {
+    const url = "/app/rpsls/play/" + shot;
+    return response = fetch(url)
+        .then(response => response.json())
+        .then(data => {
+            return data;
+        })
+        .catch(error => console.error(error));
+}
 
+function resetGame() {
 
+}
