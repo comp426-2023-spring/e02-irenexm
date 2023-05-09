@@ -1,42 +1,33 @@
 <html>
   <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css" />
-    <title>RPSLS</title>
     <script src="script.js"></script>
+    <title>RPSLS</title>
   </head>
   <body>
     <header class="gameHeader">
       <h1>Play RPS or RPSLS!</h1>
-      <div class="rules">click for rules</div>
+      <div class="rules">
+        Click <a href="rules.html" target="_blank">here</a> for rules
+      </div>
     </header>
 
     <main>
-
-      <input type="radio" name="mode" id="rps" class="mode-option" checked>
-      <label id="play-rps">Play Rock, Paper, Scissors</label>
-      <br>
-      <input type="radio" name="mode" id="rpsls" class="mode-option">
-      <label id="play-rpsls">Play Rock, Paper, Scissors, Lizard, Spock</label>
-      <br>
-      <input type="checkbox" id="opponent" class="mode-option">
-      <label id="play-opponent" >Play against an opponent?</label>
-
-      <form action="/action_page.php">
-        <label for="shot">choose a weapon</label>
-        <select name="shot" id="shot">
-          <option value="rock">rock</option>
-        </select>
-      </form>
-
-      <div class="rps-buttons">
-        <button id="rps">RPS</button>
-        <button id="rpsls">RPSLS</button>
+      <div class="mode-options">
+        <input type="radio" name="mode" id="rps" class="mode-option" value="rps" checked>
+        <label id="play-rps">Play Rock, Paper, Scissors</label>
+        <br>
+        <input type="radio" name="mode" id="rpsls" class="mode-option" value="rpsls">
+        <label id="play-rpsls">Play Rock, Paper, Scissors, Lizard, Spock</label>
       </div>
-
-      <div class="mode-buttons">
-        <button id="player">Play vs Opponent</button>
-        <button id="random-choice">Random Choice</button>
+      <div class="opponent-option">
+        <input type="checkbox" id="opponent" class="mode-option" value="opponent">
+        <label id="play-opponent" >Play against an opponent?</label>
       </div>
+      
 
       <div class="game-buttons">
         <button id="rock">Rock</button>
@@ -50,16 +41,8 @@
 
       </div>
 
-      <div class="scoreboard">
-
-      </div>
-
-      <div class="end-message">
-        
-      </div>
-
       <div class="reset">
-        <button id="reset" onclick=resetGame()>Restart Game</button>
+        <button id="reset-button" onclick=resetGame()>Restart Game</button>
       </div>
 
     </main>

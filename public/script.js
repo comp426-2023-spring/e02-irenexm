@@ -5,8 +5,14 @@
 const rock = document.querySelector('#rock');
 const paper = document.querySelector('#paper');
 const scissors = document.querySelector('#scissors');
+const lizard = document.querySelector('#lizard');
+const spock = document.querySelector('#spock');
 
-const resultText = document.querySelector('.result-text')
+const resultText = document.querySelector('.game-output')
+
+function displayOptions() {
+
+}
     
 function playGame() {
     const url = "/app/rpsls/play/" + shot;
