@@ -14,6 +14,7 @@ body {
     justify-content: center;
     height: 100vh;
     overflow: hidden;
+    margin-top: -75px;
 }
 
 h1 {
@@ -22,43 +23,74 @@ h1 {
 
 .rules {
   padding: 30px;
-  margin-left: -140px;
+  margin-left: -50px;
 }
 
 .mode-options {
   margin-bottom: 10px;
 }
 
+#shots {
+  margin: 10px;
+}
+
 button {
-  height: 50px;
-  width: 90px;  
-  color:rgb(59, 109, 93);
-  background-color:rgb(215, 234, 250);
-  margin: 10px;
-  border-radius: 10px;
-  font-size: 17px;
-}
-
-.game-buttons {
-  margin: 10px;
-  display: flex;
-  justify-content: space-around;
-}
-
-.reset {
-  margin: 10px;
-}
-
-#reset-button {
   background-color:rgb(181, 244, 223);
   color:black;
   height: 40px;
   width: 80px;
-  font-size: 13px;
+  font-size: 15px;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+#game-output {
+  margin-top: 10px;
 }
 
 .rps-rules {
   margin: 20px;
   padding: 10px;
   background-color:rgb(241, 186, 186);
+}
+
+p.active {
+    display: block;
+}
+
+p.inactive {
+    display: none;
+}
+
+div.active {
+    display: block;
+}
+
+div.inactive {
+    display: none;
+}
+
+input.active {
+    display: inline;
+}
+
+input.inactive {
+    display: none;
+}
+
+label.active {
+    display: inline;
+}
+
+label.inactive {
+    display: none;
+}
+
+button.active {
+    /* display: block makes the buttons vertical */
+    display: inline;
+}
+
+button.inactive {
+    display: none;
 }

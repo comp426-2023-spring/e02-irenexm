@@ -1,4 +1,5 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,35 +17,46 @@
     </header>
 
     <main>
-      <div class="mode-options">
-        <input type="radio" name="mode" id="rps" class="mode-option" value="rps" checked>
+      <div id="mode-options" class="active">
+        <input type="radio" name="mode" id="rps" name="mode-option" value="rps" checked onclick="showRpsls()">
         <label id="play-rps">Play Rock, Paper, Scissors</label>
         <br>
-        <input type="radio" name="mode" id="rpsls" class="mode-option" value="rpsls">
+        <input type="radio" name="mode" id="rpsls" name="mode-option" value="rpsls" onclick="showRpsls()">
         <label id="play-rpsls">Play Rock, Paper, Scissors, Lizard, Spock</label>
-      </div>
-      <div class="opponent-option">
-        <input type="checkbox" id="opponent" class="mode-option" value="opponent">
+        <br>
+        <input type="checkbox" id="opponent" name="opponent-option" value="opponent" onclick="showOptions()">
         <label id="play-opponent" >Play against an opponent?</label>
       </div>
       
+      <div id="shot-options" class="inactive">
+        <input type="radio" id="rock" name="rps-shot" value="rock">
+        <label for="rock">Rock</label>
+        <br>
+        <input type="radio" id="paper" name="rps-shot" value="paper">
+        <label for="paper">Paper</label>
+        <br>
+        <input type="radio" id="scissors" name="rps-shot" value="scissors">
+        <label for="scissors">Scissors</label>
+        <br>
+        <input type="radio" id="lizard" name="rpsls-shot" value="lizard">
+        <label for="lizard" name="rpsls-shot">Lizard</label>
+        <br>
+        <input type="radio" id="spock" name="rpsls-shot" value="spock">
+        <label for="spock" name="rpsls-shot">Spock</label>
+        <br>
+    </div>
 
-      <div class="game-buttons">
-        <button id="rock">Rock</button>
-        <button id="paper">Paper</button>
-        <button id="scissors">Scissors</button>
-        <button id="lizard">Lizard</button>
-        <button id="spock">Spock</button>
+      <div id="game-output" class="inactive">
+        <p>you picked: paper</p>
+        <p>your opponent picked: rock</p>
+        <p>result: win</p>
       </div>
 
-      <div class="game-output">
-
+      <div id="buttons">
+        <button id="play-button" type="submit" onclick="playGame()">Play Game</button>
+        <button id="reset-button" type="submit" onclick="resetGame()">Restart Game</button>
       </div>
-
-      <div class="reset">
-        <button id="reset-button" onclick=resetGame()>Restart Game</button>
-      </div>
-
+      
     </main>
   </body>
 </html>
