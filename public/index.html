@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
     <title>RPSLS</title>
   </head>
@@ -18,10 +18,10 @@
 
     <main>
       <div id="mode-options" class="active">
-        <input type="radio" name="mode" id="rps" name="mode-option" value="rps" checked onclick="showRpsls()">
+        <input type="radio" id="rps" name="rps-option" value="rps" checked onclick="showOptions()">
         <label id="play-rps">Play Rock, Paper, Scissors</label>
         <br>
-        <input type="radio" name="mode" id="rpsls" name="mode-option" value="rpsls" onclick="showRpsls()">
+        <input type="radio" id="rpsls" name="rpsls-option" value="rpsls" onclick="showOptions()">
         <label id="play-rpsls">Play Rock, Paper, Scissors, Lizard, Spock</label>
         <br>
         <input type="checkbox" id="opponent" name="opponent-option" value="opponent" onclick="showOptions()">
@@ -39,10 +39,10 @@
         <label for="scissors">Scissors</label>
         <br>
         <input type="radio" id="lizard" name="rpsls-shot" value="lizard">
-        <label for="lizard" name="rpsls-shot">Lizard</label>
+        <label for="lizard">Lizard</label>
         <br>
         <input type="radio" id="spock" name="rpsls-shot" value="spock">
-        <label for="spock" name="rpsls-shot">Spock</label>
+        <label for="spock">Spock</label>
         <br>
     </div>
 

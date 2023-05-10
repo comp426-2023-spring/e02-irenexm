@@ -9,9 +9,7 @@ function showOptions() {
     } else {
         shots.className = "inactive";
     }
-}
 
-function showRpsls() {
     let rpsShots = document.getElementsByName("rps-shot");
     rpsShots.forEach(rpsShot => {
         rpsShot.className = "active";
