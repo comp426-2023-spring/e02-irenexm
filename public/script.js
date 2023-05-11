@@ -10,20 +10,17 @@ function showOptions() {
         shots.className = "inactive";
     }
 
-    let rpsShots = document.getElementsByName("rps-shot");
-    rpsShots.forEach(rpsShot => {
-        rpsShot.className = "active";
-    })
-
-    let rpslsShots = document.getElementsByName("rpsls-shot");
+    let rpsShots = document.querySelectorAll(".rps-shot");
+    let rpslsShots = document.querySelectorAll(".rpsls-shot");
+    
     if (document.getElementById("rpsls").checked) {
-        rpslsShots.forEach(rpslsShot => {
-            rpslsShot.className = "active";
-        })
+        for (let i = 0; i < rpslsShots.length; i++) {
+            rpslsShots[i].style.display = "inline";
+        }
     } else {
-        rpslsShots.forEach(rpslsShot => {
-            rpslsShot.className = "inactive";
-        })
+        for (let i = 0; i < rpslsShots.length; i++) {
+            rpslsShots[i].style.display = "none";
+        }
     }
 }
 
@@ -31,20 +28,22 @@ function showOptions() {
 
     
 async function playGame() {
-    const opponent = document.getElementById("opponent").checked;
-    const mode = document.getElementById("rps").checked ? "rps" : "rpsls";
-    
     document.querySelector("#mode-options").className = "inactive";
     document.querySelector("#shot-options").className = "inactive";
     document.querySelector("#game-output").className = "active";
     document.querySelector("#play-button").className = "inactive";
 
+    const opponent = document.getElementById("opponent").checked;
+    const mode = document.getElementById("rps").checked ? "rps" : "rpsls";
+
+
     let shot = "";
     if (opponent) {
-        shot = document.querySelector('input[type="radio"][name*="-shot"]:checked').value;
+        shot = document.querySelector('input[type="radio"][name="shot-option"]:checked').value;
+        console.log(shot);
     }
 
-    const url = `/app/${mode}/play/${shot}`;;
+    const url = `${document.baseURI}/app/${mode}/play/${shot}`;
     console.log(url);
 
     try {
@@ -64,7 +63,6 @@ async function playGame() {
         console.error("Error fetching game result:", error);
         alert("Error fetching game result. Please try again later.");
     }
-
 }
 
 function resetGame() {
@@ -76,7 +74,7 @@ function resetGame() {
     document.getElementById("rps").checked = true;
     document.getElementById("rpsls").checked = false;
     document.getElementById("opponent").checked = false;
-    document.getElementById("rock").checked = false;
+    document.getElementById("rock").checked = true;
     document.getElementById("paper").checked = false;
     document.getElementById("scissors").checked = false;
     document.getElementById("lizard").checked = false;

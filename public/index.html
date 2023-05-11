@@ -18,10 +18,10 @@
 
     <main>
       <div id="mode-options" class="active">
-        <input type="radio" id="rps" name="rps-option" value="rps" checked onclick="showOptions()">
+        <input type="radio" id="rps" name="mode-option" value="rps" checked onclick="showOptions()">
         <label id="play-rps">Play Rock, Paper, Scissors</label>
         <br>
-        <input type="radio" id="rpsls" name="rpsls-option" value="rpsls" onclick="showOptions()">
+        <input type="radio" id="rpsls" name="mode-option" value="rpsls" onclick="showOptions()">
         <label id="play-rpsls">Play Rock, Paper, Scissors, Lizard, Spock</label>
         <br>
         <input type="checkbox" id="opponent" name="opponent-option" value="opponent" onclick="showOptions()">
@@ -29,20 +29,20 @@
       </div>
       
       <div id="shot-options" class="inactive">
-        <input type="radio" id="rock" name="rps-shot" value="rock">
-        <label for="rock">Rock</label>
+        <input type="radio" id="rock" name="shot-option" class="rps-shot" value="rock" checked>
+        <label for="rock" class="rps-shot">Rock</label>
         <br>
-        <input type="radio" id="paper" name="rps-shot" value="paper">
-        <label for="paper">Paper</label>
+        <input type="radio" id="paper" name="shot-option" class="rps-shot" value="paper">
+        <label for="paper" class="rps-shot">Paper</label>
         <br>
-        <input type="radio" id="scissors" name="rps-shot" value="scissors">
-        <label for="scissors">Scissors</label>
+        <input type="radio" id="scissors" name="shot-option" class="rps-shot" value="scissors">
+        <label for="scissors" class="rps-shot">Scissors</label>
         <br>
-        <input type="radio" id="lizard" name="rpsls-shot" value="lizard">
-        <label for="lizard">Lizard</label>
+        <input type="radio" id="lizard" name="shot-option" class="rpsls-shot" value="lizard">
+        <label for="lizard" class="rpsls-shot">Lizard</label>
         <br>
-        <input type="radio" id="spock" name="rpsls-shot" value="spock">
-        <label for="spock">Spock</label>
+        <input type="radio" id="spock" name="shot-option" class="rpsls-shot" value="spock">
+        <label for="spock" class="rpsls-shot">Spock</label>
         <br>
     </div>
 
